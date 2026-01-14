@@ -8,7 +8,7 @@ import glob
 
 def main():
     # Paths
-    workspace_root = r"c:\Users\iskender\Desktop\hsi_lidar_fusion"
+    workspace_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
     bands_file = os.path.join(workspace_root, "neon_aop_bands.csv")
     annotations_file = os.path.join(workspace_root, "benchmark_annotations.csv")
     hsi_folder = os.path.join(workspace_root, "Hyperspectral")
@@ -32,7 +32,7 @@ def main():
     
     for image_name, group in grouped_annotations:
         # Construct HSI file path
-        # Annotation: JERC_048_2018.tif -> File: JERC_048_2018_hyperspectral.tif
+        # Annotation: ex: JERC_048_2018.tif -> File: JERC_048_2018_hyperspectral.tif
         base_name = image_name.replace('.tif', '')
         hsi_filename = f"{base_name}_hyperspectral.tif"
         hsi_path = os.path.join(hsi_folder, hsi_filename)
