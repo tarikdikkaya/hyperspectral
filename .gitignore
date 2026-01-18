@@ -206,3 +206,6 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 hsi_rgb_comparison/Hyperspectral/
+hsi_rgb_comparison/hyperspectral_selected/
+hsi_rgb_comparison/hsi_model/__pycache__/
+hsi_rgb_comparison/lightning_logs/
